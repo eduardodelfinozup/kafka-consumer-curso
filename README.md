@@ -20,7 +20,5 @@ curl --request POST \
 ```
 curl --request GET \
   --url localhost:8082/clientes/2\
-  --header 'Content-Type: application/json' \
-  --data '
 
 ```
