@@ -3,13 +3,11 @@ package com.zcoders.restaurante.listener;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.zcoders.restaurante.model.Item;
 import com.zcoders.restaurante.model.Pedido;
 import com.zcoders.restaurante.model.StatusPedido;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class NovoPedidoEvent {
 

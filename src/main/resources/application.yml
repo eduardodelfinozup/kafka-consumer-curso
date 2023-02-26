@@ -24,3 +24,13 @@ spring:
       topic:
         novo-pedido: PEDIDO_NOVO
         pedido-cancelado: PEDIDO_CANCELADO
+
+  kafka1:
+    consumer:
+      bootstrap-servers: 127.0.0.1:9093
+      group-id: conta
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: com.zcoders.restaurante.listener.NovaContaDeserializer
+      topic:
+        nova-conta: NOVA_CONTA

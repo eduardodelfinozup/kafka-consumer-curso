@@ -13,32 +13,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class PedidoCanceladoListenerConfiguration {
+public class ContaListenerConfiguration {
 
-    @Value("${spring.kafka.consumer.bootstrap-servers}")
+    @Value("${spring.kafka1.consumer.bootstrap-servers}")
     private String bootstrapAddress;
-    @Value("${spring.kafka.consumer.group-id}")
+    @Value("${spring.kafka1.consumer.group-id}")
     private String groupId;
-    @Value("${spring.kafka.consumer.auto-offset-reset}")
+    @Value("${spring.kafka1.consumer.auto-offset-reset}")
     private String autoOffsetReset;
 
     @Bean
-    public ConsumerFactory<String, Object> pedidoCanceladoConsumerFactory() {
-        Map<String, Object> properties = new HashMap<>();
+    public ConsumerFactory<String, Object> novaContaConsumerFactory() {
+        Map<String, Object> properties =  new HashMap<>();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, PedidoCanceladoDeserializer.class);
+        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, NovaContaDeserializer.class );
         return new DefaultKafkaConsumerFactory<>(properties);
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, PedidoCanceladoEvent>
-    pedidoCanceladoKafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, PedidoCanceladoEvent> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, NovaContaEvent>
+    novaContaKafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, NovaContaEvent> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
 
-        factory.setConsumerFactory(pedidoCanceladoConsumerFactory());
+        factory.setConsumerFactory(novaContaConsumerFactory());
         return factory;
     }
 
