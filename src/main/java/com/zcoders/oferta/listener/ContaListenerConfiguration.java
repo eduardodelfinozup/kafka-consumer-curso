@@ -1,4 +1,4 @@
-package com.zcoders.restaurante.listener;
+package com.zcoders.oferta.listener;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

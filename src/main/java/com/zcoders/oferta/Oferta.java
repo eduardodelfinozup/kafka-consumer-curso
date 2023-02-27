@@ -1,8 +1,7 @@
-package com.zcoders.restaurante.oferta;
+package com.zcoders.oferta;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
 public class Oferta {

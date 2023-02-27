@@ -1,4 +1,4 @@
-package com.zcoders.restaurante.oferta;
+package com.zcoders.oferta;
 
 public enum Tipo {
     CARTAO, EMPRESTIMO;

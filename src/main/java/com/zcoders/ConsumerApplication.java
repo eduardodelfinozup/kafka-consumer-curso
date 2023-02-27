@@ -1,4 +1,4 @@
-package com.zcoders.restaurante;
+package com.zcoders;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @EnableAsync
-public class RestauranteApplication {
+public class ConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RestauranteApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 
 }

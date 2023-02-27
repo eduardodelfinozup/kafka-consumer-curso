@@ -1,4 +1,4 @@
-package com.zcoders.restaurante.oferta;
+package com.zcoders.oferta;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

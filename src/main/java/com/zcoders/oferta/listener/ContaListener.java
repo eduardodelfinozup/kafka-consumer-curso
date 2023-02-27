@@ -1,6 +1,6 @@
-package com.zcoders.restaurante.listener;
+package com.zcoders.oferta.listener;
 
-import com.zcoders.restaurante.oferta.OfertaService;
+import com.zcoders.oferta.OfertaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -31,6 +31,16 @@ spring:
       group-id: conta
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: com.zcoders.restaurante.listener.NovaContaDeserializer
+      value-deserializer: com.zcoders.oferta.listener.NovaContaDeserializer
       topic:
         nova-conta: NOVA_CONTA
+
+  kafka2:
+    consumer:
+      bootstrap-servers: 127.0.0.1:9094
+      group-id: livraria
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: com.zcoders.notificacao.listener.NovaVendaDeserializer
+      topic:
+        nova-venda: NOVA_VENDA
